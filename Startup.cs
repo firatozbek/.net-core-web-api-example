@@ -54,6 +54,12 @@ namespace myapi
 
             app.UseAuthorization();
 
+            //Adding Default Files Middleware to set the default page 
+            app.UseDefaultFiles();
+
+            //Adding Static Files Middleware to serve the static files
+            app.UseStaticFiles();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
